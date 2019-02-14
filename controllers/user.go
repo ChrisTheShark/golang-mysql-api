@@ -16,7 +16,7 @@ type UserController struct {
 	userRepository repository.UserRepository
 }
 
-// NewUserController is a convienince function to create a UserController
+// NewUserController is a convenience function to create a UserController
 func NewUserController(r repository.UserRepository) *UserController {
 	return &UserController{r}
 }
