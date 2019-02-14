@@ -8,7 +8,7 @@ import (
 	"github.com/ChrisTheShark/golang-mysql-api/models"
 )
 
-// UserRepository inteface describes rrepository operations on Users
+// UserRepository interface describes repository operations on Users
 type UserRepository interface {
 	GetAll() ([]models.User, error)
 	GetByID(string) (*models.User, error)
@@ -21,7 +21,7 @@ type UserRepositoryImpl struct {
 	db *sql.DB
 }
 
-// NewUserRepository convience function to create a UserRepository
+// NewUserRepository convenience function to create a UserRepository
 func NewUserRepository(db *sql.DB) UserRepository {
 	return &UserRepositoryImpl{db}
 }

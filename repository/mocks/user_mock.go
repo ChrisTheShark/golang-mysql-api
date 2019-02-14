@@ -11,7 +11,7 @@ import (
 // MockUserRepository houses logic to retrieve users from a mock repository
 type MockUserRepository struct{}
 
-// NewMockUserRepository convience function to create a MockUserRepository
+// NewMockUserRepository convenience function to create a MockUserRepository
 func NewMockUserRepository() repository.UserRepository {
 	return &MockUserRepository{}
 }
@@ -61,7 +61,7 @@ func (r MockUserRepository) Delete(user models.User) error {
 // MockErroringUserRepository returns errors for all operations.
 type MockErroringUserRepository struct{}
 
-// NewMockErroringUserRepository convience function to create a MockErroringUserRepository
+// NewMockErroringUserRepository convenience function to create a MockErroringUserRepository
 func NewMockErroringUserRepository() repository.UserRepository {
 	return &MockErroringUserRepository{}
 }
