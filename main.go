@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"log"
 	"net/http"
+	"os"
 
 	"github.com/ChrisTheShark/golang-mysql-api/repository"
 
@@ -26,7 +27,7 @@ func main() {
 }
 
 func getDatabase() *sql.DB {
-	db, err := sql.Open("mysql", "root:password@tcp(127.0.0.1:3306)/sample")
+	db, err := sql.Open("mysql", os.Getenv("MYSQL_HOST"))
 	if err != nil {
 		log.Panic(err)
 	}
